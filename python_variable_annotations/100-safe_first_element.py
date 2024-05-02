@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
-"""1st Element of a Sequence"""
-from typing import Any, Optional, Sequence
+""" 10. Duck typing - first element of a sequence
+"""
 
-def safe_first_element(lst: Sequence[Any]) -> Optional[Any]:
-    """function that returns the first element of a Sequence"""
+from typing import Any, Sequence, Union
+
+
+def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
+    """ Gets first element safely.
+    """
     if lst:
         return lst[0]
     else:
-        return Any
-
+        return None
